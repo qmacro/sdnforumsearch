@@ -1,0 +1,3 @@
+Using the SAPUI5 SearchField widget to expose the SAP Developer Network forum info. Simple use case of the widget showing the suggestion list populated as you type. This initial version starts suggestions after the first two characters, matching at the start of the string.
+
+See http://www.pipetree.com/qmacro/blog/2012/03/sapui5-powered-scn-forum-finder/ for background.
