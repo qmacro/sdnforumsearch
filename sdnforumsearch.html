@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="./sap-ui-core.js"
+<!--
+     "/sapui5/" is the new de-facto conventional place
+     we're expecting you to be hosting your copy of the
+     SAPUI5 library. Please modify as appropriate.
+-->
+<script src="/sapui5/sap-ui-core.js"
     type="text/javascript"
     id="sap-ui-bootstrap"
     data-sap-ui-libs="sap.ui.commons"
@@ -26,9 +31,6 @@ SDN Forum Search
         oSdnForumMap = JSON.parse(data);
         aSdnForums = Object.keys(oSdnForumMap);
     });
-
-    // Load the plugin to use 'jQuery.sap.startsWithIgnoreCase'
-    // jQuery.sap.require("jquery.sap.strings");
 
     // Filter the forums according to the given prefix
     var filterSdnForums = function (sTerm) {
