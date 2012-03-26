@@ -28,13 +28,14 @@ SDN Forum Search
     });
 
     // Load the plugin to use 'jQuery.sap.startsWithIgnoreCase'
-    jQuery.sap.require("jquery.sap.strings");
+    // jQuery.sap.require("jquery.sap.strings");
 
     // Filter the forums according to the given prefix
-    var filterSdnForums = function (sPrefix) {
+    var filterSdnForums = function (sTerm) {
+        var re = new RegExp(sTerm,"i")
         var aResult = [];
         for (var i = 0; i < aSdnForums.length; i++) {
-            if (!sPrefix || sPrefix.length == 0 || jQuery.sap.startsWithIgnoreCase(aSdnForums[i], sPrefix)) {
+            if (!sTerm || sTerm.length == 0 || re.test(aSdnForums[i])) {
                 aResult.push(aSdnForums[i]);
             }
         }
